@@ -13,4 +13,4 @@ rm -f SenchaCmd-6.5.3.6-linux-amd64.sh.zip &&\
 rm -f SenchaCmd-6.5.3.6-linux-amd64.sh 
 
 
-ENV PATH="/opt/sencha:$PATH"
+ENV PATH="/opt/sencha/cmd:$PATH"
