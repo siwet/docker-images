@@ -1,0 +1,1 @@
+https://media.githubusercontent.com/media/cntsw/docker-images/master/package/SenchaCmd-6.5.3.6-linux-amd64.sh.zip

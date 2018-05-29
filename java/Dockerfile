@@ -11,7 +11,7 @@ rm -f jdk-8u171-linux-x64.tar.gz &&\
 ln -s jdk1.8.0_171/ jdk 
 
 
-ENV JAVA_HOME "/opt/java"
-ENV JRE_HOME "${JAVA_HOME}/jre"
-ENV CLASSPATH ".:${JAVA_HOME}/lib:${JRE_HOME}/lib"
-ENV PATH "${JAVA_HOME}/bin:$PAT"
+ENV JAVA_HOME="/opt/java" \
+	JRE_HOME="/opt/java/jre" \
+	CLASSPATH=".:/opt/java/lib:/opt/java/lib" \
+	PATH="/opt/java/bin:$PATH"
