@@ -1,1 +1,2 @@
 43dafc862dd98bcff889e1239625e7a3  jdk-8u171-linux-x64.tar.gz
+94c4327daadafd776c64de0afe2763b1  SenchaCmd-6.5.3.6-linux-amd64.sh.zip
