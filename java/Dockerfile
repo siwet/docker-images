@@ -1,11 +1,17 @@
 FROM centos:7
 
-
 MAINTAINER acktsw <acktsw@gmail.com>
 
+# set zone and locale
 RUN \
+ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &&\
+localedef -i zh_CN -f UTF-8 zh_CN.UTF-8 
+
+# install oracle-jdk
+RUN \
+yum install -y wget &&\
 cd /opt &&\
-curl -o jdk-8u171-linux-x64.tar.gz https://media.githubusercontent.com/media/cntsw/docker-images/master/package/jdk-8u171-linux-x64.tar.gz &&\
+wget -c --no-cookies --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie"  http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.tar.gz &&\
 tar -zxf jdk-8u171-linux-x64.tar.gz &&\
 rm -f jdk-8u171-linux-x64.tar.gz &&\
 ln -s jdk1.8.0_171/ jdk &&\
