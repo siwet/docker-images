@@ -2,10 +2,14 @@ FROM centos:7
 
 MAINTAINER acktsw <acktsw@gmail.com>
 
+
 # set zone and locale
 RUN \
-ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime &&\
-localedef -i zh_CN -f UTF-8 zh_CN.UTF-8 
+ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+
+ENV LANG=en_US.UTF-8 \
+    LC_ALL=en_US.UTF-8
+
 
 # install oracle-jdk
 RUN \
