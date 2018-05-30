@@ -14,7 +14,7 @@ unzip SenchaCmd-6.5.3.6-linux-amd64.sh.zip &&\
 ./SenchaCmd-6.5.3.6-linux-amd64.sh -Dall=true -q -dir /opt/sencha/cmd &&\
 rm -f SenchaCmd-6.5.3.6-linux-amd64.sh.zip &&\
 rm -f SenchaCmd-6.5.3.6-linux-amd64.sh &&\
-sed -E 's/.*sencha.*//g' -i .bashrc
+sed -E 's/.*sencha.*//g' -i /root/.bashrc
 
 
 ENV PATH="/opt/sencha/cmd:$PATH"
