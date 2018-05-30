@@ -13,7 +13,8 @@ curl -o SenchaCmd-6.5.3.6-linux-amd64.sh.zip http://cdn.sencha.com/cmd/6.5.3.6/n
 unzip SenchaCmd-6.5.3.6-linux-amd64.sh.zip &&\
 ./SenchaCmd-6.5.3.6-linux-amd64.sh -Dall=true -q -dir /opt/sencha/cmd &&\
 rm -f SenchaCmd-6.5.3.6-linux-amd64.sh.zip &&\
-rm -f SenchaCmd-6.5.3.6-linux-amd64.sh 
+rm -f SenchaCmd-6.5.3.6-linux-amd64.sh &&\
+sed -E 's/.*sencha.*//g' -i .bashrc
 
 
 ENV PATH="/opt/sencha/cmd:$PATH"
