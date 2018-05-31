@@ -1,4 +1,4 @@
-FROM centos:7
+FROM acktsw/centos
 
 MAINTAINER acktsw <acktsw@gmail.com>
 
