@@ -1,17 +1,16 @@
-FROM acktsw/centos
+FROM centos:7
 
 MAINTAINER acktsw <acktsw@gmail.com>
 
-# install oracle-jdk
+ENV LANG=en_US.UTF-8 \
+    LC_ALL=en_US.UTF-8
+
+ADD font/simkai.ttf /usr/share/fonts/
+ADD init.sh /tmp/setup.sh
+
 RUN \
-yum install -y wget &&\
-cd /opt &&\
-wget -c --no-cookies --no-check-certificate --header "Cookie: oraclelicense=accept-securebackup-cookie"  http://download.oracle.com/otn-pub/java/jdk/8u171-b11/512cd62ec5174c3487ac17c61aaa89e8/jdk-8u171-linux-x64.tar.gz &&\
-tar -zxf jdk-8u171-linux-x64.tar.gz &&\
-rm -f jdk-8u171-linux-x64.tar.gz &&\
-ln -s jdk1.8.0_171/ jdk &&\
-mv /dev/random /dev/random.bak &&\
-ln -s /dev/urandom /dev/random
+chmod +x /tmp/init.sh &&\
+/tmp/setup.sh
 
 ENV JAVA_HOME="/opt/jdk" \
 	JRE_HOME="/opt/jdk/jre" \
