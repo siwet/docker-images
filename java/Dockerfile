@@ -6,11 +6,11 @@ ENV LANG=en_US.UTF-8 \
     LC_ALL=en_US.UTF-8
 
 ADD font/simkai.ttf /usr/share/fonts/
-ADD setup.sh /tmp/setup.sh
+ADD setup.sh /
 
 RUN \
-chmod +x /tmp/setup.sh &&\
-/tmp/setup.sh
+chmod +x /setup.sh && sync&&\
+/setup.sh
 
 ENV JAVA_HOME="/opt/jdk" \
 	JRE_HOME="/opt/jdk/jre" \

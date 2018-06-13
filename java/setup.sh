@@ -21,4 +21,4 @@ mkfontscale
 mkfontdir
 fc-cache
 
-rm -f /tmp/setup.sh
+rm -f /setup.sh
