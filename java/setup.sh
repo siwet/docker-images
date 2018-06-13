@@ -1,4 +1,5 @@
-#!/bin/bash
+
+echo starting...
 set -e
 
 # set locale
@@ -20,4 +21,4 @@ mkfontscale
 mkfontdir
 fc-cache
 
-rm -f /tmp/init.sh
+rm -f /tmp/setup.sh
